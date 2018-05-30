@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">MagiciansQuizApp</string>
+    <string name="magicians_title">Welcome to the Magicians Quiz! Choose wisely...</string>
+    <string name="content_description">The image depicts the title of the SyFy show The Magicians.</string>
+</resources>
