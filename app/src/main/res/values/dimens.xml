@@ -1,3 +1,11 @@
 <resources>
-    <dimen name="title_text_size">20sp</dimen>
+    <dimen name="title_text_size">24sp</dimen>
+    <dimen name="characters_title">22sp</dimen>
+    <dimen name="characters_questions">20sp</dimen>
+    <dimen name="padding">16dp</dimen>
+    <dimen name="padding2">8dp</dimen>
+    <!-- 16dp between Q&A -->
+    <dimen name="margin1">16dp</dimen>
+    <!-- 24dp between each question -->
+    <dimen name="margin2">24dp</dimen>
 </resources>

@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@android:color/background_dark"
@@ -8,25 +9,210 @@
     <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:paddingTop="@dimen/margin2"
+        android:paddingBottom="@dimen/margin2"
+        android:paddingLeft="@dimen/padding"
+        android:paddingRight="@dimen/padding"
+        tools:context="com.example.android.magiciansquizapp.MainActivity" >
 
-        <ImageView
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:adjustViewBounds="true"
-            android:scaleType="fitStart"
-            android:src="@drawable/titlesequence"
-            android:contentDescription="@string/content_description"/>
-        <TextView
+            android:orientation="vertical">
+
+
+            <ImageView
+                    android:id="@+id/title_sequence_image"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:adjustViewBounds="true"
+                    android:scaleType="fitStart"
+                    android:src="@drawable/titlesequence"
+                    android:contentDescription="@string/content_description"/>
+                <TextView
+                    android:id="@+id/title_sequence_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/magicians_title"
+                    android:textAlignment="center"
+                    android:textSize="@dimen/title_text_size"
+                    android:textStyle="bold"
+                    android:typeface="serif"
+                    android:textColor="@color/colorPrimary"
+                    android:padding="@dimen/padding" />
+
+                <ImageView
+                    android:id="@+id/characters_title_image"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:scaleType="center"
+                    android:src="@drawable/characters_resized2"
+                    tools:ignore="contentDescription"
+                    android:padding="@dimen/padding"/>
+
+        </LinearLayout>
+
+        <!-- Section 1: Characters -->
+
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/magicians_title"
-            android:textAlignment="center"
-            android:textSize="@dimen/title_text_size"
-            android:textStyle="bold"
-            android:typeface="serif"
-            android:textColor="@color/colorPrimary"/>
+            android:orientation="vertical">
 
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scaleType="centerCrop"
+                android:text="@string/character_quiz"
+                android:textAlignment="center"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/characters_title"
+                android:textStyle="bold"
+                android:typeface="serif"
+                android:layout_marginBottom="@dimen/margin2" />
+
+            <!-- Characters Q1 -->
+
+            <TextView
+                android:id="@+id/characters_q1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/character_q1"
+                android:textColor="@android:color/white"
+                android:layout_marginBottom="@dimen/margin1" />
+
+            <!-- GO BACK AND ADD android:onClick="radioq1" to every button after java!! -->
+
+            <RadioGroup
+                android:id="@+id/radio1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/q1_r1"
+                    android:textColor="@android:color/white"
+                    android:buttonTint="@color/colorAccent" />
+
+                <RadioButton
+                    android:id="@+id/answer_q1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/q1_r2"
+                    android:textColor="@android:color/white"
+                    android:buttonTint="@color/colorAccent" />
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/q1_r3"
+                    android:textColor="@android:color/white"
+                    android:buttonTint="@color/colorAccent" />
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/q1_r4"
+                    android:textColor="@android:color/white"
+                    android:buttonTint="@color/colorAccent"
+                    android:layout_marginBottom="@dimen/margin1" />
+            </RadioGroup>
+
+            <!-- Characters Q2 -->
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/character_q2"
+                android:textColor="@android:color/white"
+                android:layout_marginBottom="@dimen/margin1" />
+
+            <RadioGroup
+                android:id="@+id/radio2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RadioButton
+                    android:id="@+id/answer_q2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/truth"
+                    android:textColor="@android:color/white"
+                    android:buttonTint="@color/colorAccent" />
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/falsity"
+                    android:textColor="@android:color/white"
+                    android:buttonTint="@color/colorAccent"
+                    android:layout_marginBottom="@dimen/margin1" />
+            </RadioGroup>
+
+            <!-- Characters Q3 -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/character_q3"
+                android:textColor="@android:color/white"
+                android:layout_marginBottom="@dimen/margin1" />
+
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/q3_c1"
+                android:padding="@dimen/padding2"
+                android:textColor="@android:color/white"
+                android:theme="@style/CheckBoxes" />
+
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/q3_c2"
+                android:padding="@dimen/padding2"
+                android:textColor="@android:color/white"
+                android:theme="@style/CheckBoxes" />
+
+            <CheckBox
+                android:id="@+id/answer_q3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/q3_c3"
+                android:padding="@dimen/padding2"
+                android:textColor="@android:color/white"
+                android:theme="@style/CheckBoxes" />
+
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/q3_c4"
+                android:padding="@dimen/padding2"
+                android:textColor="@android:color/white"
+                android:theme="@style/CheckBoxes"
+                android:layout_marginBottom="@dimen/margin1" />
+
+
+
+        </LinearLayout>
+
+        <!-- Section 2: Timeline Trivia
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+        </LinearLayout> -->
+
+        <!-- Section 3: Epic Battles
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+        </LinearLayout> -->
 
     </LinearLayout>
 </ScrollView>

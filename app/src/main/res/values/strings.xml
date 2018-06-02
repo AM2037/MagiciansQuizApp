@@ -1,5 +1,37 @@
 <resources>
+    //App info and intro
     <string name="app_name">MagiciansQuizApp</string>
-    <string name="magicians_title">Welcome to the Magicians Quiz! Choose wisely...</string>
+    <string name="magicians_title">Welcome to the Magicians Quiz! Choose wisely&#8230;</string>
     <string name="content_description">The image depicts the title of the SyFy show The Magicians.</string>
+
+    //Section 1: Characters
+    <string name="character_quiz">How well do you know the characters?</string>
+
+    //Q1 Radio Buttons
+    <string name="character_q1">Which fantasy book series is the character Quentin Coldwater a massive fan of?</string>
+    <string name="q1_r1">Fillory and Friends</string>
+    <string name="q1_r2">Fillory and Further</string> <!-- correct, id: answer_q1 -->
+    <string name="q1_r3">Fillorian Tales</string>
+    <string name="q1_r4">Fillory Forever</string>
+
+    //Q2 T/F
+    <string name="character_q2">During the season 1 finale, Julia betrays all of her friends to make a deal with their mortal enemy.</string>
+    <string name="truth">True</string> <!-- correct, id: answer_q2 -->
+    <string name="falsity">False</string>
+
+    //Q3 Checkboxes
+    <string name="character_q3">Which song does Penny hate because he can never get it out of his head?</string>
+    <string name="q3_c1">Taylor Swift: Bad Blood</string>
+    <string name="q3_c2">Dua Lipa: New Rules</string>
+    <string name="q3_c3">Taylor Swift: Shake It Off</string> <!-- correct, id: answer_q3 -->
+    <string name="q3_c4">Paramore: Still Into You</string>
+
+
+    // Section 2: Timeline Trivia
+
+    // Section 3: Epic Battles
+
+    //Point system
+    <string name="toast_correct">That is the correct answer. Good work!</string>
+    <string name="toast_wrong">That is not the correct answer. Please try again.</string>
 </resources>
