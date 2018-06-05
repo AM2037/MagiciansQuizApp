@@ -1,37 +1,85 @@
 <resources>
-    //App info and intro
+
+    <!-- App info and intro -->
     <string name="app_name">MagiciansQuizApp</string>
+    <string name="hint1">Name</string>
     <string name="magicians_title">Welcome to the Magicians Quiz! Choose wisely&#8230;</string>
     <string name="content_description">The image depicts the title of the SyFy show The Magicians.</string>
 
-    //Section 1: Characters
-    <string name="character_quiz">How well do you know the characters?</string>
 
-    //Q1 Radio Buttons
+    <!-- SECTION 1: CHARACTER QUIZ -->
+    <string name="character_quiz">How well do you know the characters?</string>
+    <!-- Q1 MC Radio Buttons -->
     <string name="character_q1">Which fantasy book series is the character Quentin Coldwater a massive fan of?</string>
     <string name="q1_r1">Fillory and Friends</string>
     <string name="q1_r2">Fillory and Further</string> <!-- correct, id: answer_q1 -->
     <string name="q1_r3">Fillorian Tales</string>
     <string name="q1_r4">Fillory Forever</string>
-
-    //Q2 T/F
+    <!-- Q2 T/F Radio Buttons -->
     <string name="character_q2">During the season 1 finale, Julia betrays all of her friends to make a deal with their mortal enemy.</string>
     <string name="truth">True</string> <!-- correct, id: answer_q2 -->
     <string name="falsity">False</string>
-
-    //Q3 Checkboxes
+    <!-- Q3 MC Radio Buttons -->
     <string name="character_q3">Which song does Penny hate because he can never get it out of his head?</string>
-    <string name="q3_c1">Taylor Swift: Bad Blood</string>
-    <string name="q3_c2">Dua Lipa: New Rules</string>
-    <string name="q3_c3">Taylor Swift: Shake It Off</string> <!-- correct, id: answer_q3 -->
-    <string name="q3_c4">Paramore: Still Into You</string>
+    <string name="q3_r1">Taylor Swift: Bad Blood</string>
+    <string name="q3_r2">Dua Lipa: New Rules</string>
+    <string name="q3_r3">Taylor Swift: Shake It Off</string> <!-- correct, id: answer_q3 -->
+    <string name="q3_r4">Paramore: Still Into You</string>
 
 
-    // Section 2: Timeline Trivia
+    <!-- SECTION 2: TIMELINE TRIVIA -->
+    <string name="timeline_quiz">Let\'s test your knowledge of the multiple timelines!</string>
+    <!-- Q4 Open-ended -->
+    <string name="timeline_q4">In season 1 a librarian tells Margo that she went by another name in her previous 39 lives. What was it?</string>
+    <string name="hint2">Enter response here</string>
+    <!-- Q5 Checkboxes [Select multiple] -->
+    <string name="timeline_q5">Throughout the series there have been more than one occurrence of the Tesla Flexion spell that folds time and space in on itself. Who all have been involved in these? Please select all that apply.</string>
+    <string name="q5_c1">Quentin Coldwater</string>
+    <string name="q5_c2">Marina Andrieski</string>
+    <string name="q5_c3">Eliot Waugh</string> <!-- incorrect, id: wrong_answer_q5 -->
+    <string name="q5_c4">Josh Hoberman</string>
+    <string name="q5_c5">Alice Quinn</string>
+    <string name="q5_c6">Julia Wicker</string>
+    <!-- Q6 T/F -->
+    <string name="timeline_q6">Speaking of Tesla Flexion\'s, they used the first one to contact Alice Quinn from the 24th timeline. Is this true or false?</string> <!-- answer:false -->
 
-    // Section 3: Epic Battles
 
-    //Point system
+    <!-- SECTION 3: EPIC BATTLES -->
+    <string name="battle_quiz">And now onto the epic battles portion of this assessment!</string>
+    <!-- Q7 MC Radio Buttons -->
+    <string name="battle_q7">I mentioned earlier that Julia betrays her friends at the end of series one to make a deal with the Beast. Which god was she trying to kill at that time?</string>
+    <string name="q7_r1">Our Lady Underground</string>
+    <string name="q7_r2">The Trickster God Reynard</string> <!-- correct, id: answer_q7 -->
+    <string name="q7_r3">Hades</string>
+    <string name="q7_r4">Ember of Fillory</string>
+    <!-- Q8 Checkboxes -->
+    <string name="battle_q8">Which of the following aliases, or names, has "The Beast" also gone by throughout the show? Please select all that apply.</string>
+    <string name="q8_c1">Mothra</string>
+    <string name="q8_c2">Moth Man</string> <!-- incorrect, id: wrong_answer_q81 -->
+    <string name="q8_c3">The Darkness</string> <!-- incorrect, id: wrong_answer_q82 -->
+    <string name="q8_c4">Martin Chatwin</string>
+    <string name="q8_c5">The Destroyer of Worlds</string> <!-- incorrect, id: wrong_answer_q83 -->
+    <string name="q8_c6">Quentin Coldwater</string>
+    <!-- Q9 Radio Buttons -->
+    <string name="battle_q9">In the last season the magicians go on an epic quest to restore magic back to their universe. What was the name of this adventure?</string>
+    <string name="q9_r1">The Story of the Seven Worlds</string>
+    <string name="q9_r2">The Tale of the Seven Dragons</string>
+    <string name="q9_r3">The Story of the Seven Keys</string>
+    <string name="q9_r4">The Tale of the Seven Keys</string> <!-- correct, id: answer_q9-->
+    <!-- Q10 Checkboxes -->
+    <string name="battle_q10">For the duration of the show, the characters have had to battle a multitude of magical creatures. Which of the following have they NOT faced off against?</string>
+    <string name="q10_c1">Fairy Queen</string> <!-- incorrect, id: wrong_answer_q101 -->
+    <string name="q10_c2">Leviathan</string>
+    <string name="q10_c3">Centaur</string>
+    <string name="q10_c4">Talking Bear</string>
+    <string name="q10_c5">Lamprey</string> <!-- incorrect, id: wrong_answer_q102 -->
+    <string name="q10_c6">The Great Cock</string>
+
+
+
+
+
+    <!-- Point system -->
     <string name="toast_correct">That is the correct answer. Good work!</string>
     <string name="toast_wrong">That is not the correct answer. Please try again.</string>
 </resources>

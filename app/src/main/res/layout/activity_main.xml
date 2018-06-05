@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -20,7 +21,6 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
-
 
             <ImageView
                     android:id="@+id/title_sequence_image"
@@ -56,6 +56,7 @@
         <!-- Section 1: Characters -->
 
         <LinearLayout
+            android:id="@+id/quiz_1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
@@ -89,35 +90,36 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 
-                <RadioButton
+                <android.support.v7.widget.AppCompatRadioButton
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/q1_r1"
-                    android:textColor="@android:color/white"
-                    android:buttonTint="@color/colorAccent" />
+                    app:buttonTint="@color/colorAccent"
+                    android:textColor="@android:color/white"/>
 
-                <RadioButton
+                <android.support.v7.widget.AppCompatRadioButton
                     android:id="@+id/answer_q1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/q1_r2"
-                    android:textColor="@android:color/white"
-                    android:buttonTint="@color/colorAccent" />
+                    app:buttonTint="@color/colorAccent"
+                    android:textColor="@android:color/white"/>
 
-                <RadioButton
+                <android.support.v7.widget.AppCompatRadioButton
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/q1_r3"
-                    android:textColor="@android:color/white"
-                    android:buttonTint="@color/colorAccent" />
+                    app:buttonTint="@color/colorAccent"
+                    android:textColor="@android:color/white"/>
 
-                <RadioButton
+                <android.support.v7.widget.AppCompatRadioButton
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/q1_r4"
+                    app:buttonTint="@color/colorAccent"
                     android:textColor="@android:color/white"
-                    android:buttonTint="@color/colorAccent"
-                    android:layout_marginBottom="@dimen/margin1" />
+                    android:layout_marginBottom="@dimen/margin1"/>
+
             </RadioGroup>
 
             <!-- Characters Q2 -->
@@ -134,21 +136,22 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 
-                <RadioButton
+                <android.support.v7.widget.AppCompatRadioButton
                     android:id="@+id/answer_q2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/truth"
-                    android:textColor="@android:color/white"
-                    android:buttonTint="@color/colorAccent" />
+                    app:buttonTint="@color/colorAccent"
+                    android:textColor="@android:color/white"/>
 
-                <RadioButton
+                <android.support.v7.widget.AppCompatRadioButton
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/falsity"
+                    app:buttonTint="@color/colorAccent"
                     android:textColor="@android:color/white"
-                    android:buttonTint="@color/colorAccent"
-                    android:layout_marginBottom="@dimen/margin1" />
+                    android:layout_marginBottom="@dimen/margin1"/>
+
             </RadioGroup>
 
             <!-- Characters Q3 -->
@@ -159,10 +162,100 @@
                 android:textColor="@android:color/white"
                 android:layout_marginBottom="@dimen/margin1" />
 
+            <RadioGroup
+                android:id="@+id/radio3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <android.support.v7.widget.AppCompatRadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/q3_r1"
+                    android:padding="@dimen/padding2"
+                    app:buttonTint="@color/colorAccent"
+                    android:textColor="@android:color/white" />
+
+                <android.support.v7.widget.AppCompatRadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/q3_r2"
+                    android:padding="@dimen/padding2"
+                    app:buttonTint="@color/colorAccent"
+                    android:textColor="@android:color/white" />
+
+                <android.support.v7.widget.AppCompatRadioButton
+                    android:id="@+id/answer_q3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/q3_r3"
+                    android:padding="@dimen/padding2"
+                    app:buttonTint="@color/colorAccent"
+                    android:textColor="@android:color/white" />
+
+                <android.support.v7.widget.AppCompatRadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/q3_r4"
+                    android:padding="@dimen/padding2"
+                    app:buttonTint="@color/colorAccent"
+                    android:textColor="@android:color/white"
+                    android:layout_marginBottom="@dimen/margin1" />
+
+            </RadioGroup>
+
+        </LinearLayout>
+
+        <!-- Section 2: Timeline Trivia -->
+
+        <LinearLayout
+            android:id="@+id/quiz_2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scaleType="centerCrop"
+                android:text="@string/timeline_quiz"
+                android:textAlignment="center"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/characters_title"
+                android:textStyle="bold"
+                android:typeface="serif"
+                android:layout_marginBottom="@dimen/margin2" />
+
+            <!-- Timelines Q4 -->
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/timeline_q4"
+                android:textColor="@android:color/white"
+                android:layout_marginBottom="@dimen/margin1" />
+
+            <EditText
+                android:id="@+id/response_field"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/hint2"
+                android:inputType="textCapWords"
+                android:textColor="@android:color/white"
+                android:background="@color/colorPrimaryDark"
+                android:layout_marginBottom="@dimen/margin1" />
+
+            <!-- Timelines Q5 -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/timeline_q5"
+                android:textColor="@android:color/white"
+                android:layout_marginBottom="@dimen/margin1" />
+
             <CheckBox
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/q3_c1"
+                android:text="@string/q5_c1"
                 android:padding="@dimen/padding2"
                 android:textColor="@android:color/white"
                 android:theme="@style/CheckBoxes" />
@@ -170,16 +263,16 @@
             <CheckBox
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/q3_c2"
+                android:text="@string/q5_c2"
                 android:padding="@dimen/padding2"
                 android:textColor="@android:color/white"
                 android:theme="@style/CheckBoxes" />
 
             <CheckBox
-                android:id="@+id/answer_q3"
+                android:id="@+id/wrong_answer_q5"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/q3_c3"
+                android:text="@string/q5_c3"
                 android:padding="@dimen/padding2"
                 android:textColor="@android:color/white"
                 android:theme="@style/CheckBoxes" />
@@ -187,7 +280,298 @@
             <CheckBox
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/q3_c4"
+                android:text="@string/q5_c4"
+                android:padding="@dimen/padding2"
+                android:textColor="@android:color/white"
+                android:theme="@style/CheckBoxes" />
+
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/q5_c5"
+                android:padding="@dimen/padding2"
+                android:textColor="@android:color/white"
+                android:theme="@style/CheckBoxes" />
+
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/q5_c6"
+                android:padding="@dimen/padding2"
+                android:textColor="@android:color/white"
+                android:theme="@style/CheckBoxes"
+                android:layout_marginBottom="@dimen/margin1" />
+
+            <!-- Timelines Q6 -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/timeline_q6"
+                android:textColor="@android:color/white"
+                android:layout_marginBottom="@dimen/margin1" />
+
+            <RadioGroup
+                android:id="@+id/radio4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <android.support.v7.widget.AppCompatRadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/truth"
+                    app:buttonTint="@color/colorAccent"
+                    android:textColor="@android:color/white"/>
+
+                <android.support.v7.widget.AppCompatRadioButton
+                    android:id="@+id/answer_q6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/falsity"
+                    app:buttonTint="@color/colorAccent"
+                    android:textColor="@android:color/white"
+                    android:layout_marginBottom="@dimen/margin1"/>
+
+            </RadioGroup>
+
+        </LinearLayout>
+
+        <!-- Section 3: Epic Battles -->
+
+        <LinearLayout
+            android:id="@+id/quiz_3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scaleType="centerCrop"
+                android:text="@string/battle_quiz"
+                android:textAlignment="center"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/characters_title"
+                android:textStyle="bold"
+                android:typeface="serif"
+                android:layout_marginBottom="@dimen/margin2" />
+
+            <!-- Battles Q7 -->
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/battle_q7"
+                android:textColor="@android:color/white"
+                android:layout_marginBottom="@dimen/margin1" />
+
+            <RadioGroup
+                android:id="@+id/radio5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <android.support.v7.widget.AppCompatRadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/q7_r1"
+                    android:padding="@dimen/padding2"
+                    app:buttonTint="@color/colorAccent"
+                    android:textColor="@android:color/white" />
+
+                <android.support.v7.widget.AppCompatRadioButton
+                    android:id="@+id/answer_q7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/q7_r2"
+                    android:padding="@dimen/padding2"
+                    app:buttonTint="@color/colorAccent"
+                    android:textColor="@android:color/white" />
+
+                <android.support.v7.widget.AppCompatRadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/q7_r3"
+                    android:padding="@dimen/padding2"
+                    app:buttonTint="@color/colorAccent"
+                    android:textColor="@android:color/white" />
+
+                <android.support.v7.widget.AppCompatRadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/q7_r4"
+                    android:padding="@dimen/padding2"
+                    app:buttonTint="@color/colorAccent"
+                    android:textColor="@android:color/white"
+                    android:layout_marginBottom="@dimen/margin1" />
+
+            </RadioGroup>
+
+            <!-- Battles Q8 -->
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/battle_q8"
+                android:textColor="@android:color/white"
+                android:layout_marginBottom="@dimen/margin1" />
+
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/q8_c1"
+                android:padding="@dimen/padding2"
+                android:textColor="@android:color/white"
+                android:theme="@style/CheckBoxes" />
+
+            <CheckBox
+                android:id="@+id/wrong_answer_q81"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/q8_c2"
+                android:padding="@dimen/padding2"
+                android:textColor="@android:color/white"
+                android:theme="@style/CheckBoxes" />
+
+            <CheckBox
+                android:id="@+id/wrong_answer_q82"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/q8_c3"
+                android:padding="@dimen/padding2"
+                android:textColor="@android:color/white"
+                android:theme="@style/CheckBoxes" />
+
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/q8_c4"
+                android:padding="@dimen/padding2"
+                android:textColor="@android:color/white"
+                android:theme="@style/CheckBoxes" />
+
+            <CheckBox
+                android:id="@+id/wrong_answer_q83"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/q8_c5"
+                android:padding="@dimen/padding2"
+                android:textColor="@android:color/white"
+                android:theme="@style/CheckBoxes" />
+
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/q8_c6"
+                android:padding="@dimen/padding2"
+                android:textColor="@android:color/white"
+                android:theme="@style/CheckBoxes"
+                android:layout_marginBottom="@dimen/margin1" />
+
+            <!-- Battles Q9 -->
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/battle_q9"
+                android:textColor="@android:color/white"
+                android:layout_marginBottom="@dimen/margin1" />
+
+            <RadioGroup
+                android:id="@+id/radio6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <android.support.v7.widget.AppCompatRadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/q9_r1"
+                    android:padding="@dimen/padding2"
+                    app:buttonTint="@color/colorAccent"
+                    android:textColor="@android:color/white" />
+
+                <android.support.v7.widget.AppCompatRadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/q9_r2"
+                    android:padding="@dimen/padding2"
+                    app:buttonTint="@color/colorAccent"
+                    android:textColor="@android:color/white" />
+
+                <android.support.v7.widget.AppCompatRadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/q9_r3"
+                    android:padding="@dimen/padding2"
+                    app:buttonTint="@color/colorAccent"
+                    android:textColor="@android:color/white" />
+
+                <android.support.v7.widget.AppCompatRadioButton
+                    android:id="@+id/answer_q9"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/q9_r4"
+                    android:padding="@dimen/padding2"
+                    app:buttonTint="@color/colorAccent"
+                    android:textColor="@android:color/white"
+                    android:layout_marginBottom="@dimen/margin1" />
+
+            </RadioGroup>
+
+
+            <!-- Battles Q10 -->
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/battle_q10"
+                android:textColor="@android:color/white"
+                android:layout_marginBottom="@dimen/margin1" />
+
+            <CheckBox
+                android:id="@+id/wrong_answer_q101"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/q10_c1"
+                android:padding="@dimen/padding2"
+                android:textColor="@android:color/white"
+                android:theme="@style/CheckBoxes" />
+
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/q10_c2"
+                android:padding="@dimen/padding2"
+                android:textColor="@android:color/white"
+                android:theme="@style/CheckBoxes" />
+
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/q10_c3"
+                android:padding="@dimen/padding2"
+                android:textColor="@android:color/white"
+                android:theme="@style/CheckBoxes" />
+
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/q10_c4"
+                android:padding="@dimen/padding2"
+                android:textColor="@android:color/white"
+                android:theme="@style/CheckBoxes" />
+
+            <CheckBox
+                android:id="@+id/wrong_answer_q102"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/q10_c5"
+                android:padding="@dimen/padding2"
+                android:textColor="@android:color/white"
+                android:theme="@style/CheckBoxes" />
+
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/q10_c6"
                 android:padding="@dimen/padding2"
                 android:textColor="@android:color/white"
                 android:theme="@style/CheckBoxes"
@@ -195,24 +579,8 @@
 
 
 
+
         </LinearLayout>
-
-        <!-- Section 2: Timeline Trivia
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
-
-        </LinearLayout> -->
-
-        <!-- Section 3: Epic Battles
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
-
-        </LinearLayout> -->
 
     </LinearLayout>
 </ScrollView>
