@@ -1,7 +1,8 @@
 <resources>
     <dimen name="title_text_size">24sp</dimen>
-    <dimen name="characters_title">22sp</dimen>
-    <dimen name="characters_questions">20sp</dimen>
+    <dimen name="topics">22sp</dimen>
+    <dimen name="questions">18sp</dimen>
+    <dimen name="answers">16sp</dimen>
     <dimen name="padding">16dp</dimen>
     <dimen name="padding2">8dp</dimen>
     <!-- 16dp between Q&A -->

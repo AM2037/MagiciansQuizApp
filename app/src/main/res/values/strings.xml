@@ -34,12 +34,12 @@
     <string name="hint2">Enter response here</string>
     <!-- Q5 Checkboxes [Select multiple] -->
     <string name="timeline_q5">Throughout the series there have been more than one occurrence of the Tesla Flexion spell that folds time and space in on itself. Who all have been involved in these? Please select all that apply.</string>
-    <string name="q5_c1">Quentin Coldwater</string>
-    <string name="q5_c2">Marina Andrieski</string>
-    <string name="q5_c3">Eliot Waugh</string> <!-- incorrect, id: wrong_answer_q5 -->
-    <string name="q5_c4">Josh Hoberman</string>
-    <string name="q5_c5">Alice Quinn</string>
-    <string name="q5_c6">Julia Wicker</string>
+    <string name="q5_c1">Quentin Coldwater</string> <!-- id: Q5_checkbox_1 -->
+    <string name="q5_c2">Marina Andrieski</string> <!-- id: Q5_checkbox_2 -->
+    <string name="q5_c3">Eliot Waugh</string> <!-- incorrect, id: Q5_checkbox_3_wrong -->
+    <string name="q5_c4">Josh Hoberman</string> <!-- id: Q5_checkbox_4-->
+    <string name="q5_c5">Alice Quinn</string> <!-- id: Q5_checkbox_5 -->
+    <string name="q5_c6">Julia Wicker</string> <!-- id: Q5_checkbox_6 -->
     <!-- Q6 T/F -->
     <string name="timeline_q6">Speaking of Tesla Flexion\'s, they used the first one to contact Alice Quinn from the 24th timeline. Is this true or false?</string> <!-- answer:false -->
 
@@ -54,12 +54,12 @@
     <string name="q7_r4">Ember of Fillory</string>
     <!-- Q8 Checkboxes -->
     <string name="battle_q8">Which of the following aliases, or names, has "The Beast" also gone by throughout the show? Please select all that apply.</string>
-    <string name="q8_c1">Mothra</string>
-    <string name="q8_c2">Moth Man</string> <!-- incorrect, id: wrong_answer_q81 -->
-    <string name="q8_c3">The Darkness</string> <!-- incorrect, id: wrong_answer_q82 -->
-    <string name="q8_c4">Martin Chatwin</string>
-    <string name="q8_c5">The Destroyer of Worlds</string> <!-- incorrect, id: wrong_answer_q83 -->
-    <string name="q8_c6">Quentin Coldwater</string>
+    <string name="q8_c1">Mothra</string> <!-- id: Q8_checkbox_1 -->
+    <string name="q8_c2">Moth Man</string> <!-- incorrect, id: Q8_checkbox_2_wrong -->
+    <string name="q8_c3">The Darkness</string> <!-- incorrect, id: Q8_checkbox_3_wrong -->
+    <string name="q8_c4">Martin Chatwin</string> <!-- id: Q8_checkbox_4 -->
+    <string name="q8_c5">The Destroyer of Worlds</string> <!-- incorrect, id: Q8_checkbox_5_wrong -->
+    <string name="q8_c6">Quentin Coldwater</string> <!-- id: Q8_checkbox_6 -->
     <!-- Q9 Radio Buttons -->
     <string name="battle_q9">In the last season the magicians go on an epic quest to restore magic back to their universe. What was the name of this adventure?</string>
     <string name="q9_r1">The Story of the Seven Worlds</string>
@@ -68,12 +68,12 @@
     <string name="q9_r4">The Tale of the Seven Keys</string> <!-- correct, id: answer_q9-->
     <!-- Q10 Checkboxes -->
     <string name="battle_q10">For the duration of the show, the characters have had to battle a multitude of magical creatures. Which of the following have they NOT faced off against?</string>
-    <string name="q10_c1">Fairy Queen</string> <!-- incorrect, id: wrong_answer_q101 -->
-    <string name="q10_c2">Leviathan</string>
-    <string name="q10_c3">Centaur</string>
-    <string name="q10_c4">Talking Bear</string>
-    <string name="q10_c5">Lamprey</string> <!-- incorrect, id: wrong_answer_q102 -->
-    <string name="q10_c6">The Great Cock</string>
+    <string name="q10_c1">Fairy Queen</string> <!-- incorrect, id: Q10_checkbox_1_wrong -->
+    <string name="q10_c2">Leviathan</string> <!-- id: Q10_checkbox_2 -->
+    <string name="q10_c3">Centaur</string> <!-- id: Q10_checkbox_3 -->
+    <string name="q10_c4">Talking Bear</string> <!-- id: Q10_checkbox_4 -->
+    <string name="q10_c5">Lamprey</string> <!-- incorrect, id: Q10_checkbox_5_wrong -->
+    <string name="q10_c6">The Great Cock</string> <!-- id: Q10_checkbox_6 -->
 
 
 
@@ -82,4 +82,7 @@
     <!-- Point system -->
     <string name="toast_correct">That is the correct answer. Good work!</string>
     <string name="toast_wrong">That is not the correct answer. Please try again.</string>
+    <string name="score_summary_name">Name: %s</string>
+    <string name="score_summary">See Score</string>
+    <string name="score_summary_score">Final Score:</string>
 </resources>

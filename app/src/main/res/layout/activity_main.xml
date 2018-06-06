@@ -17,6 +17,17 @@
         android:paddingRight="@dimen/padding"
         tools:context="com.example.android.magiciansquizapp.MainActivity" >
 
+        <EditText
+            android:id="@+id/name_field"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="@dimen/padding"
+            android:paddingBottom="@dimen/padding"
+            android:hint="@string/hint1"
+            android:inputType="textCapWords"
+            android:textColor="@android:color/white"
+            android:background="@android:color/black" />
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -44,7 +55,6 @@
                     android:padding="@dimen/padding" />
 
                 <ImageView
-                    android:id="@+id/characters_title_image"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:scaleType="center"
@@ -69,7 +79,7 @@
                 android:text="@string/character_quiz"
                 android:textAlignment="center"
                 android:textColor="@color/colorPrimary"
-                android:textSize="@dimen/characters_title"
+                android:textSize="@dimen/topics"
                 android:textStyle="bold"
                 android:typeface="serif"
                 android:layout_marginBottom="@dimen/margin2" />
@@ -81,10 +91,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/character_q1"
+                android:textSize="@dimen/questions"
                 android:textColor="@android:color/white"
                 android:layout_marginBottom="@dimen/margin1" />
-
-            <!-- GO BACK AND ADD android:onClick="radioq1" to every button after java!! -->
 
             <RadioGroup
                 android:id="@+id/radio1"
@@ -95,6 +104,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/q1_r1"
+                    android:textSize="@dimen/answers"
                     app:buttonTint="@color/colorAccent"
                     android:textColor="@android:color/white"/>
 
@@ -103,6 +113,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/q1_r2"
+                    android:textSize="@dimen/answers"
                     app:buttonTint="@color/colorAccent"
                     android:textColor="@android:color/white"/>
 
@@ -110,6 +121,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/q1_r3"
+                    android:textSize="@dimen/answers"
                     app:buttonTint="@color/colorAccent"
                     android:textColor="@android:color/white"/>
 
@@ -117,6 +129,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/q1_r4"
+                    android:textSize="@dimen/answers"
                     app:buttonTint="@color/colorAccent"
                     android:textColor="@android:color/white"
                     android:layout_marginBottom="@dimen/margin1"/>
@@ -129,6 +142,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/character_q2"
+                android:textSize="@dimen/questions"
                 android:textColor="@android:color/white"
                 android:layout_marginBottom="@dimen/margin1" />
 
@@ -142,6 +156,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/truth"
+                    android:textSize="@dimen/answers"
                     app:buttonTint="@color/colorAccent"
                     android:textColor="@android:color/white"/>
 
@@ -149,6 +164,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/falsity"
+                    android:textSize="@dimen/answers"
                     app:buttonTint="@color/colorAccent"
                     android:textColor="@android:color/white"
                     android:layout_marginBottom="@dimen/margin1"/>
@@ -160,6 +176,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/character_q3"
+                android:textSize="@dimen/questions"
                 android:textColor="@android:color/white"
                 android:layout_marginBottom="@dimen/margin1" />
 
@@ -172,6 +189,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/q3_r1"
+                    android:textSize="@dimen/answers"
                     android:padding="@dimen/padding2"
                     app:buttonTint="@color/colorAccent"
                     android:textColor="@android:color/white" />
@@ -180,6 +198,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/q3_r2"
+                    android:textSize="@dimen/answers"
                     android:padding="@dimen/padding2"
                     app:buttonTint="@color/colorAccent"
                     android:textColor="@android:color/white" />
@@ -189,6 +208,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/q3_r3"
+                    android:textSize="@dimen/answers"
                     android:padding="@dimen/padding2"
                     app:buttonTint="@color/colorAccent"
                     android:textColor="@android:color/white" />
@@ -197,6 +217,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/q3_r4"
+                    android:textSize="@dimen/answers"
                     android:padding="@dimen/padding2"
                     app:buttonTint="@color/colorAccent"
                     android:textColor="@android:color/white"
@@ -222,12 +243,7 @@
                 android:scaleType="center"
                 tools:ignore="contentDescription"
                 android:padding="@dimen/padding"/>
-            <!--
-            <pl.droidsonroids.gif.GifImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@drawable/teslaflexion" />
-            -->
+
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -235,7 +251,7 @@
                 android:text="@string/timeline_quiz"
                 android:textAlignment="center"
                 android:textColor="@color/colorPrimary"
-                android:textSize="@dimen/characters_title"
+                android:textSize="@dimen/topics"
                 android:textStyle="bold"
                 android:typeface="serif"
                 android:layout_marginBottom="@dimen/margin2" />
@@ -246,6 +262,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/timeline_q4"
+                android:textSize="@dimen/questions"
                 android:textColor="@android:color/white"
                 android:layout_marginBottom="@dimen/margin1" />
 
@@ -254,6 +271,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="@string/hint2"
+                android:textSize="@dimen/answers"
                 android:inputType="textCapWords"
                 android:textColor="@android:color/white"
                 android:background="@color/colorPrimaryDark"
@@ -264,57 +282,75 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/timeline_q5"
+                android:textSize="@dimen/questions"
                 android:textColor="@android:color/white"
                 android:layout_marginBottom="@dimen/margin1" />
 
             <CheckBox
+                android:id="@+id/Q5_checkbox_1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/q5_c1"
-                android:padding="@dimen/padding2"
-                android:textColor="@android:color/white"
-                android:theme="@style/CheckBoxes" />
-
-            <CheckBox
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/q5_c2"
-                android:padding="@dimen/padding2"
-                android:textColor="@android:color/white"
-                android:theme="@style/CheckBoxes" />
-
-            <CheckBox
-                android:id="@+id/wrong_answer_q5"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/q5_c3"
-                android:padding="@dimen/padding2"
-                android:textColor="@android:color/white"
-                android:theme="@style/CheckBoxes" />
-
-            <CheckBox
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/q5_c4"
-                android:padding="@dimen/padding2"
-                android:textColor="@android:color/white"
-                android:theme="@style/CheckBoxes" />
-
-            <CheckBox
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/q5_c5"
-                android:padding="@dimen/padding2"
-                android:textColor="@android:color/white"
-                android:theme="@style/CheckBoxes" />
-
-            <CheckBox
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/q5_c6"
+                android:textSize="@dimen/answers"
                 android:padding="@dimen/padding2"
                 android:textColor="@android:color/white"
                 android:theme="@style/CheckBoxes"
+                android:onClick="checkBoxOne" />
+
+            <CheckBox
+                android:id="@+id/Q5_checkbox_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/q5_c2"
+                android:textSize="@dimen/answers"
+                android:padding="@dimen/padding2"
+                android:textColor="@android:color/white"
+                android:theme="@style/CheckBoxes"
+                android:onClick="checkBoxOne" />
+
+            <CheckBox
+                android:id="@+id/Q5_checkbox_3_wrong"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/q5_c3"
+                android:textSize="@dimen/answers"
+                android:padding="@dimen/padding2"
+                android:textColor="@android:color/white"
+                android:theme="@style/CheckBoxes"
+                android:onClick="checkBoxOne" />
+
+            <CheckBox
+                android:id="@+id/Q5_checkbox_4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/q5_c4"
+                android:textSize="@dimen/answers"
+                android:padding="@dimen/padding2"
+                android:textColor="@android:color/white"
+                android:theme="@style/CheckBoxes"
+                android:onClick="checkBoxOne" />
+
+            <CheckBox
+                android:id="@+id/Q5_checkbox_5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/q5_c5"
+                android:textSize="@dimen/answers"
+                android:padding="@dimen/padding2"
+                android:textColor="@android:color/white"
+                android:theme="@style/CheckBoxes"
+                android:onClick="checkBoxOne" />
+
+            <CheckBox
+                android:id="@+id/Q5_checkbox_6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/q5_c6"
+                android:textSize="@dimen/answers"
+                android:padding="@dimen/padding2"
+                android:textColor="@android:color/white"
+                android:theme="@style/CheckBoxes"
+                android:onClick="checkBoxOne"
                 android:layout_marginBottom="@dimen/margin1" />
 
             <!-- Timelines Q6 -->
@@ -322,6 +358,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/timeline_q6"
+                android:textSize="@dimen/questions"
                 android:textColor="@android:color/white"
                 android:layout_marginBottom="@dimen/margin1" />
 
@@ -334,6 +371,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/truth"
+                    android:textSize="@dimen/answers"
                     app:buttonTint="@color/colorAccent"
                     android:textColor="@android:color/white"/>
 
@@ -342,6 +380,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/falsity"
+                    android:textSize="@dimen/answers"
                     app:buttonTint="@color/colorAccent"
                     android:textColor="@android:color/white" />
 
@@ -374,7 +413,7 @@
                 android:text="@string/battle_quiz"
                 android:textAlignment="center"
                 android:textColor="@color/colorPrimary"
-                android:textSize="@dimen/characters_title"
+                android:textSize="@dimen/topics"
                 android:textStyle="bold"
                 android:typeface="serif"
                 android:layout_marginBottom="@dimen/margin2" />
@@ -385,6 +424,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/battle_q7"
+                android:textSize="@dimen/questions"
                 android:textColor="@android:color/white"
                 android:layout_marginBottom="@dimen/margin1" />
 
@@ -397,6 +437,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/q7_r1"
+                    android:textSize="@dimen/answers"
                     android:padding="@dimen/padding2"
                     app:buttonTint="@color/colorAccent"
                     android:textColor="@android:color/white" />
@@ -406,6 +447,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/q7_r2"
+                    android:textSize="@dimen/answers"
                     android:padding="@dimen/padding2"
                     app:buttonTint="@color/colorAccent"
                     android:textColor="@android:color/white" />
@@ -414,6 +456,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/q7_r3"
+                    android:textSize="@dimen/answers"
                     android:padding="@dimen/padding2"
                     app:buttonTint="@color/colorAccent"
                     android:textColor="@android:color/white" />
@@ -422,6 +465,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/q7_r4"
+                    android:textSize="@dimen/answers"
                     android:padding="@dimen/padding2"
                     app:buttonTint="@color/colorAccent"
                     android:textColor="@android:color/white"
@@ -435,59 +479,75 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/battle_q8"
+                android:textSize="@dimen/questions"
                 android:textColor="@android:color/white"
                 android:layout_marginBottom="@dimen/margin1" />
 
             <CheckBox
+                android:id="@+id/Q8_checkbox_1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/q8_c1"
-                android:padding="@dimen/padding2"
-                android:textColor="@android:color/white"
-                android:theme="@style/CheckBoxes" />
-
-            <CheckBox
-                android:id="@+id/wrong_answer_q81"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/q8_c2"
-                android:padding="@dimen/padding2"
-                android:textColor="@android:color/white"
-                android:theme="@style/CheckBoxes" />
-
-            <CheckBox
-                android:id="@+id/wrong_answer_q82"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/q8_c3"
-                android:padding="@dimen/padding2"
-                android:textColor="@android:color/white"
-                android:theme="@style/CheckBoxes" />
-
-            <CheckBox
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/q8_c4"
-                android:padding="@dimen/padding2"
-                android:textColor="@android:color/white"
-                android:theme="@style/CheckBoxes" />
-
-            <CheckBox
-                android:id="@+id/wrong_answer_q83"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/q8_c5"
-                android:padding="@dimen/padding2"
-                android:textColor="@android:color/white"
-                android:theme="@style/CheckBoxes" />
-
-            <CheckBox
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/q8_c6"
+                android:textSize="@dimen/answers"
                 android:padding="@dimen/padding2"
                 android:textColor="@android:color/white"
                 android:theme="@style/CheckBoxes"
+                android:onClick="checkBoxTwo" />
+
+            <CheckBox
+                android:id="@+id/Q8_checkbox_2_wrong"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/q8_c2"
+                android:textSize="@dimen/answers"
+                android:padding="@dimen/padding2"
+                android:textColor="@android:color/white"
+                android:theme="@style/CheckBoxes"
+                android:onClick="checkBoxTwo" />
+
+            <CheckBox
+                android:id="@+id/Q8_checkbox_3_wrong"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/q8_c3"
+                android:textSize="@dimen/answers"
+                android:padding="@dimen/padding2"
+                android:textColor="@android:color/white"
+                android:theme="@style/CheckBoxes"
+                android:onClick="checkBoxTwo" />
+
+            <CheckBox
+                android:id="@+id/Q8_checkbox_4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/q8_c4"
+                android:textSize="@dimen/answers"
+                android:padding="@dimen/padding2"
+                android:textColor="@android:color/white"
+                android:theme="@style/CheckBoxes"
+                android:onClick="checkBoxTwo" />
+
+            <CheckBox
+                android:id="@+id/Q8_checkbox_5_wrong"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/q8_c5"
+                android:textSize="@dimen/answers"
+                android:padding="@dimen/padding2"
+                android:textColor="@android:color/white"
+                android:theme="@style/CheckBoxes"
+                android:onClick="checkBoxTwo" />
+
+            <CheckBox
+                android:id="@+id/Q8_checkbox_6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/q8_c6"
+                android:textSize="@dimen/answers"
+                android:padding="@dimen/padding2"
+                android:textColor="@android:color/white"
+                android:theme="@style/CheckBoxes"
+                android:onClick="checkBoxTwo"
                 android:layout_marginBottom="@dimen/margin1" />
 
             <!-- Battles Q9 -->
@@ -496,6 +556,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/battle_q9"
+                android:textSize="@dimen/questions"
                 android:textColor="@android:color/white"
                 android:layout_marginBottom="@dimen/margin1" />
 
@@ -508,6 +569,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/q9_r1"
+                    android:textSize="@dimen/answers"
                     android:padding="@dimen/padding2"
                     app:buttonTint="@color/colorAccent"
                     android:textColor="@android:color/white" />
@@ -516,6 +578,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/q9_r2"
+                    android:textSize="@dimen/answers"
                     android:padding="@dimen/padding2"
                     app:buttonTint="@color/colorAccent"
                     android:textColor="@android:color/white" />
@@ -524,6 +587,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/q9_r3"
+                    android:textSize="@dimen/answers"
                     android:padding="@dimen/padding2"
                     app:buttonTint="@color/colorAccent"
                     android:textColor="@android:color/white" />
@@ -533,6 +597,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/q9_r4"
+                    android:textSize="@dimen/answers"
                     android:padding="@dimen/padding2"
                     app:buttonTint="@color/colorAccent"
                     android:textColor="@android:color/white"
@@ -547,64 +612,95 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/battle_q10"
+                android:textSize="@dimen/questions"
                 android:textColor="@android:color/white"
                 android:layout_marginBottom="@dimen/margin1" />
 
             <CheckBox
-                android:id="@+id/wrong_answer_q101"
+                android:id="@+id/Q10_checkbox_1_wrong"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/q10_c1"
-                android:padding="@dimen/padding2"
-                android:textColor="@android:color/white"
-                android:theme="@style/CheckBoxes" />
-
-            <CheckBox
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/q10_c2"
-                android:padding="@dimen/padding2"
-                android:textColor="@android:color/white"
-                android:theme="@style/CheckBoxes" />
-
-            <CheckBox
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/q10_c3"
-                android:padding="@dimen/padding2"
-                android:textColor="@android:color/white"
-                android:theme="@style/CheckBoxes" />
-
-            <CheckBox
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/q10_c4"
-                android:padding="@dimen/padding2"
-                android:textColor="@android:color/white"
-                android:theme="@style/CheckBoxes" />
-
-            <CheckBox
-                android:id="@+id/wrong_answer_q102"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/q10_c5"
-                android:padding="@dimen/padding2"
-                android:textColor="@android:color/white"
-                android:theme="@style/CheckBoxes" />
-
-            <CheckBox
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/q10_c6"
+                android:textSize="@dimen/answers"
                 android:padding="@dimen/padding2"
                 android:textColor="@android:color/white"
                 android:theme="@style/CheckBoxes"
+                android:onClick="checkBoxThree" />
+
+            <CheckBox
+                android:id="@+id/Q10_checkbox_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/q10_c2"
+                android:textSize="@dimen/answers"
+                android:padding="@dimen/padding2"
+                android:textColor="@android:color/white"
+                android:theme="@style/CheckBoxes"
+                android:onClick="checkBoxThree" />
+
+            <CheckBox
+                android:id="@+id/Q10_checkbox_3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/q10_c3"
+                android:textSize="@dimen/answers"
+                android:padding="@dimen/padding2"
+                android:textColor="@android:color/white"
+                android:theme="@style/CheckBoxes"
+                android:onClick="checkBoxThree" />
+
+            <CheckBox
+                android:id="@+id/Q10_checkbox_4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/q10_c4"
+                android:textSize="@dimen/answers"
+                android:padding="@dimen/padding2"
+                android:textColor="@android:color/white"
+                android:theme="@style/CheckBoxes"
+                android:onClick="checkBoxThree" />
+
+            <CheckBox
+                android:id="@+id/Q10_checkbox_5_wrong"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/q10_c5"
+                android:textSize="@dimen/answers"
+                android:padding="@dimen/padding2"
+                android:textColor="@android:color/white"
+                android:theme="@style/CheckBoxes"
+                android:onClick="checkBoxThree" />
+
+            <CheckBox
+                android:id="@+id/Q10_checkbox_6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/q10_c6"
+                android:textSize="@dimen/answers"
+                android:padding="@dimen/padding2"
+                android:textColor="@android:color/white"
+                android:theme="@style/CheckBoxes"
+                android:onClick="checkBoxThree"
                 android:layout_marginBottom="@dimen/margin1" />
 
+            <!-- Scoring -->
 
+            <TextView
+                android:id="@+id/score_summary"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="@dimen/padding"
+                android:text="@string/score_summary_score"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/questions" />
 
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/score_summary"
+                android:onClick="setScore"
+                android:color="@color/colorAccent" />
 
         </LinearLayout>
-
     </LinearLayout>
 </ScrollView>
