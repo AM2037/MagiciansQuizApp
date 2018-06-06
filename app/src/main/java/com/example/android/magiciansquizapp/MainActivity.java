@@ -92,7 +92,7 @@ public class MainActivity extends AppCompatActivity {
      */
     public void radio2(View view) {
         if(view.getId() == R.id.answer_q2) {
-            score++;
+            score += 1;
             Toast.makeText(this, getString(R.string.toast_correct), Toast.LENGTH_SHORT).show();
         } else {
             Toast.makeText(this, getString(R.string.toast_wrong), Toast.LENGTH_SHORT).show();
@@ -105,7 +105,7 @@ public class MainActivity extends AppCompatActivity {
      */
     public void radio3(View view) {
         if(view.getId() == R.id.answer_q3) {
-            score++;
+            score += 1;
             Toast.makeText(this, getString(R.string.toast_correct), Toast.LENGTH_SHORT).show();
         } else {
             Toast.makeText(this, getString(R.string.toast_wrong), Toast.LENGTH_SHORT).show();
