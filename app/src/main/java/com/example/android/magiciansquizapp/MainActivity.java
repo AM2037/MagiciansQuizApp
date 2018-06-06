@@ -120,12 +120,13 @@ public class MainActivity extends AppCompatActivity {
         String answer = et.getText().toString();
 
         if (answer.isEmpty()) {
-            Toast.makeText(this, getString(R.string.toast_wrong), Toast.LENGTH_SHORT).show();
+           Toast.makeText(this, getString(R.string.toast_wrong), Toast.LENGTH_SHORT).show();
         } else {
             score += 1;
-            Toast.makeText(this, getString(R.string.toast_correct), Toast.LENGTH_SHORT).show();
         }
     }
+
+
 
     /**
      * Fifth Question
