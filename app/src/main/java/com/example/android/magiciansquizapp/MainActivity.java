@@ -11,10 +11,10 @@ import android.widget.Toast;
 public class MainActivity extends AppCompatActivity {
 
     //global variable for score
-    int score = 0;
+    private int score = 0;
 
     //nameField global
-    EditText nameField;
+    private EditText nameField;
 
     //checkbox globals -- Question 5
     CheckBox Q5firstCheckBox = null;
@@ -168,15 +168,19 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+
     /**
      * Eighth Question
      */
+
     public void checkBoxTwo(View view){
 
         if (Q8firstCheckBox.isChecked() && Q8fourthCheckBox.isChecked() && Q8sixthCheckBox.isChecked()) {
             score += 1;
             Toast.makeText(this, getString(R.string.toast_correct), Toast.LENGTH_SHORT).show();
-        } else {
+        }
+
+        if (Q8secondCheckBox.isChecked() || Q8thirdCheckBox.isChecked() || Q8fifthCheckBox.isChecked()) {
             Toast.makeText(this, getString(R.string.toast_wrong), Toast.LENGTH_SHORT).show();
         }
     }
@@ -194,6 +198,7 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+
     /**
      * Tenth Question
      */
@@ -202,10 +207,13 @@ public class MainActivity extends AppCompatActivity {
         if (Q10secondCheckBox.isChecked() && Q10thirdCheckBox.isChecked() && Q10fourthCheckBox.isChecked() && Q10sixthCheckBox.isChecked()) {
             score += 1;
             Toast.makeText(this, getString(R.string.toast_correct), Toast.LENGTH_SHORT).show();
-        } else {
+        }
+
+        if (Q10firstCheckBox.isChecked() || Q10fifthCheckBox.isChecked()) {
             Toast.makeText(this, getString(R.string.toast_wrong), Toast.LENGTH_SHORT).show();
         }
     }
+
 
 
     /**

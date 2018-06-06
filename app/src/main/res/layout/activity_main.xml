@@ -4,7 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@android:color/background_dark"
     android:fillViewport="true">
 
     <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
@@ -105,6 +104,7 @@
                     android:layout_height="wrap_content"
                     android:text="@string/q1_r1"
                     android:textSize="@dimen/answers"
+                    android:onClick="radio1"
                     app:buttonTint="@color/colorAccent"
                     android:textColor="@android:color/white"/>
 
@@ -114,6 +114,7 @@
                     android:layout_height="wrap_content"
                     android:text="@string/q1_r2"
                     android:textSize="@dimen/answers"
+                    android:onClick="radio1"
                     app:buttonTint="@color/colorAccent"
                     android:textColor="@android:color/white"/>
 
@@ -122,6 +123,7 @@
                     android:layout_height="wrap_content"
                     android:text="@string/q1_r3"
                     android:textSize="@dimen/answers"
+                    android:onClick="radio1"
                     app:buttonTint="@color/colorAccent"
                     android:textColor="@android:color/white"/>
 
@@ -130,6 +132,7 @@
                     android:layout_height="wrap_content"
                     android:text="@string/q1_r4"
                     android:textSize="@dimen/answers"
+                    android:onClick="radio1"
                     app:buttonTint="@color/colorAccent"
                     android:textColor="@android:color/white"
                     android:layout_marginBottom="@dimen/margin1"/>
@@ -157,6 +160,7 @@
                     android:layout_height="wrap_content"
                     android:text="@string/truth"
                     android:textSize="@dimen/answers"
+                    android:onClick="radio2"
                     app:buttonTint="@color/colorAccent"
                     android:textColor="@android:color/white"/>
 
@@ -165,6 +169,7 @@
                     android:layout_height="wrap_content"
                     android:text="@string/falsity"
                     android:textSize="@dimen/answers"
+                    android:onClick="radio2"
                     app:buttonTint="@color/colorAccent"
                     android:textColor="@android:color/white"
                     android:layout_marginBottom="@dimen/margin1"/>
@@ -190,6 +195,7 @@
                     android:layout_height="wrap_content"
                     android:text="@string/q3_r1"
                     android:textSize="@dimen/answers"
+                    android:onClick="radio3"
                     android:padding="@dimen/padding2"
                     app:buttonTint="@color/colorAccent"
                     android:textColor="@android:color/white" />
@@ -199,6 +205,7 @@
                     android:layout_height="wrap_content"
                     android:text="@string/q3_r2"
                     android:textSize="@dimen/answers"
+                    android:onClick="radio3"
                     android:padding="@dimen/padding2"
                     app:buttonTint="@color/colorAccent"
                     android:textColor="@android:color/white" />
@@ -209,6 +216,7 @@
                     android:layout_height="wrap_content"
                     android:text="@string/q3_r3"
                     android:textSize="@dimen/answers"
+                    android:onClick="radio3"
                     android:padding="@dimen/padding2"
                     app:buttonTint="@color/colorAccent"
                     android:textColor="@android:color/white" />
@@ -218,6 +226,7 @@
                     android:layout_height="wrap_content"
                     android:text="@string/q3_r4"
                     android:textSize="@dimen/answers"
+                    android:onClick="radio3"
                     android:padding="@dimen/padding2"
                     app:buttonTint="@color/colorAccent"
                     android:textColor="@android:color/white"
@@ -372,6 +381,7 @@
                     android:layout_height="wrap_content"
                     android:text="@string/truth"
                     android:textSize="@dimen/answers"
+                    android:onClick="radio4"
                     app:buttonTint="@color/colorAccent"
                     android:textColor="@android:color/white"/>
 
@@ -381,6 +391,7 @@
                     android:layout_height="wrap_content"
                     android:text="@string/falsity"
                     android:textSize="@dimen/answers"
+                    android:onClick="radio4"
                     app:buttonTint="@color/colorAccent"
                     android:textColor="@android:color/white" />
 
@@ -438,6 +449,7 @@
                     android:layout_height="wrap_content"
                     android:text="@string/q7_r1"
                     android:textSize="@dimen/answers"
+                    android:onClick="radio5"
                     android:padding="@dimen/padding2"
                     app:buttonTint="@color/colorAccent"
                     android:textColor="@android:color/white" />
@@ -448,6 +460,7 @@
                     android:layout_height="wrap_content"
                     android:text="@string/q7_r2"
                     android:textSize="@dimen/answers"
+                    android:onClick="radio5"
                     android:padding="@dimen/padding2"
                     app:buttonTint="@color/colorAccent"
                     android:textColor="@android:color/white" />
@@ -457,6 +470,7 @@
                     android:layout_height="wrap_content"
                     android:text="@string/q7_r3"
                     android:textSize="@dimen/answers"
+                    android:onClick="radio5"
                     android:padding="@dimen/padding2"
                     app:buttonTint="@color/colorAccent"
                     android:textColor="@android:color/white" />
@@ -466,6 +480,7 @@
                     android:layout_height="wrap_content"
                     android:text="@string/q7_r4"
                     android:textSize="@dimen/answers"
+                    android:onClick="radio5"
                     android:padding="@dimen/padding2"
                     app:buttonTint="@color/colorAccent"
                     android:textColor="@android:color/white"
@@ -570,6 +585,7 @@
                     android:layout_height="wrap_content"
                     android:text="@string/q9_r1"
                     android:textSize="@dimen/answers"
+                    android:onClick="radio6"
                     android:padding="@dimen/padding2"
                     app:buttonTint="@color/colorAccent"
                     android:textColor="@android:color/white" />
@@ -579,6 +595,7 @@
                     android:layout_height="wrap_content"
                     android:text="@string/q9_r2"
                     android:textSize="@dimen/answers"
+                    android:onClick="radio6"
                     android:padding="@dimen/padding2"
                     app:buttonTint="@color/colorAccent"
                     android:textColor="@android:color/white" />
@@ -588,6 +605,7 @@
                     android:layout_height="wrap_content"
                     android:text="@string/q9_r3"
                     android:textSize="@dimen/answers"
+                    android:onClick="radio6"
                     android:padding="@dimen/padding2"
                     app:buttonTint="@color/colorAccent"
                     android:textColor="@android:color/white" />
@@ -598,6 +616,7 @@
                     android:layout_height="wrap_content"
                     android:text="@string/q9_r4"
                     android:textSize="@dimen/answers"
+                    android:onClick="radio6"
                     android:padding="@dimen/padding2"
                     app:buttonTint="@color/colorAccent"
                     android:textColor="@android:color/white"
