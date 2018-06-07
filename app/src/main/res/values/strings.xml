@@ -53,7 +53,7 @@
     <string name="q7_r3">Hades</string>
     <string name="q7_r4">Ember of Fillory</string>
     <!-- Q8 Checkboxes -->
-    <string name="battle_q8">Which of the following aliases, or names, has "The Beast" also gone by throughout the show? Please select all that apply.</string>
+    <string name="battle_q8">Which of the following aliases, or names, has The Beast also gone by throughout the show? Please select all that apply.</string>
     <string name="q8_c1">Mothra</string> <!-- id: Q8_checkbox_1 -->
     <string name="q8_c2">Moth Man</string> <!-- incorrect, id: Q8_checkbox_2_wrong -->
     <string name="q8_c3">The Darkness</string> <!-- incorrect, id: Q8_checkbox_3_wrong -->
