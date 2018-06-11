@@ -11,7 +11,18 @@ import android.widget.Toast;
 public class MainActivity extends AppCompatActivity {
 
     //global variable for score
-    private int score = 0;
+    int score = 0;
+
+    private boolean isQ1Correct = false;
+    private boolean isQ2Correct = false;
+    private boolean isQ3Correct = false;
+    private boolean isQ4Correct = false;
+    private boolean isQ5Correct = false;
+    private boolean isQ6Correct = false;
+    private boolean isQ7Correct = false;
+    private boolean isQ8Correct = false;
+    private boolean isQ9Correct = false;
+    private boolean isQ10Correct = false;
 
     //nameField global
     private EditText nameField;
@@ -79,12 +90,14 @@ public class MainActivity extends AppCompatActivity {
      */
     public void radio1(View view) {
         if(view.getId() == R.id.answer_q1) {
-            score += 1;
+            isQ1Correct = true;
             Toast.makeText(this, getString(R.string.toast_correct), Toast.LENGTH_SHORT).show();
         } else {
+            isQ1Correct = false;
             Toast.makeText(this, getString(R.string.toast_wrong), Toast.LENGTH_SHORT).show();
         }
     }
+
 
     /**
      * Second Question
@@ -92,9 +105,10 @@ public class MainActivity extends AppCompatActivity {
      */
     public void radio2(View view) {
         if(view.getId() == R.id.answer_q2) {
-            score += 1;
+            isQ2Correct = true;
             Toast.makeText(this, getString(R.string.toast_correct), Toast.LENGTH_SHORT).show();
         } else {
+            isQ2Correct = false;
             Toast.makeText(this, getString(R.string.toast_wrong), Toast.LENGTH_SHORT).show();
         }
     }
@@ -105,9 +119,10 @@ public class MainActivity extends AppCompatActivity {
      */
     public void radio3(View view) {
         if(view.getId() == R.id.answer_q3) {
-            score += 1;
+            isQ3Correct = true;
             Toast.makeText(this, getString(R.string.toast_correct), Toast.LENGTH_SHORT).show();
         } else {
+            isQ3Correct = false;
             Toast.makeText(this, getString(R.string.toast_wrong), Toast.LENGTH_SHORT).show();
         }
     }
@@ -120,10 +135,11 @@ public class MainActivity extends AppCompatActivity {
         String answer = et.getText().toString();
 
 
-        if (answer.equals("Janet")) {
-            score += 1;
+        if (answer.equalsIgnoreCase("Janet")) {
+            isQ4Correct = true;
 
         } else {
+            isQ4Correct = false;
             Toast.makeText(this, getString(R.string.toast_wrong), Toast.LENGTH_SHORT).show();
         }
     }
@@ -136,11 +152,12 @@ public class MainActivity extends AppCompatActivity {
     public void checkBoxOne(View view){
 
         if (Q5firstCheckBox.isChecked() && Q5secondCheckBox.isChecked() && !Q5thirdCheckBox.isChecked() && Q5fourthCheckBox.isChecked() && Q5fifthCheckBox.isChecked() && Q5sixthCheckBox.isChecked()) {
-            score += 1;
+            isQ5Correct = true;
             Toast.makeText(this, getString(R.string.toast_correct), Toast.LENGTH_SHORT).show();
         }
 
         if (Q5thirdCheckBox.isChecked()) {
+            isQ5Correct = false;
             Toast.makeText(this, getString(R.string.toast_wrong), Toast.LENGTH_SHORT).show();
         }
     }
@@ -151,9 +168,10 @@ public class MainActivity extends AppCompatActivity {
      */
     public void radio4(View view) {
         if(view.getId() == R.id.answer_q6) {
-            score += 1;
+            isQ6Correct = true;
             Toast.makeText(this, getString(R.string.toast_correct), Toast.LENGTH_SHORT).show();
         } else {
+            isQ6Correct = false;
             Toast.makeText(this, getString(R.string.toast_wrong), Toast.LENGTH_SHORT).show();
         }
     }
@@ -164,9 +182,10 @@ public class MainActivity extends AppCompatActivity {
      */
     public void radio5(View view) {
         if(view.getId() == R.id.answer_q7) {
-            score += 1;
+            isQ7Correct = true;
             Toast.makeText(this, getString(R.string.toast_correct), Toast.LENGTH_SHORT).show();
         } else {
+            isQ7Correct = false;
             Toast.makeText(this, getString(R.string.toast_wrong), Toast.LENGTH_SHORT).show();
         }
     }
@@ -179,11 +198,12 @@ public class MainActivity extends AppCompatActivity {
     public void checkBoxTwo(View view){
 
         if (Q8firstCheckBox.isChecked() && !Q8secondCheckBox.isChecked() && !Q8thirdCheckBox.isChecked() && Q8fourthCheckBox.isChecked() && !Q8fifthCheckBox.isChecked() && Q8sixthCheckBox.isChecked()) {
-            score += 1;
+            isQ8Correct = true;
             Toast.makeText(this, getString(R.string.toast_correct), Toast.LENGTH_SHORT).show();
         }
 
         if (Q8secondCheckBox.isChecked() || Q8thirdCheckBox.isChecked() || Q8fifthCheckBox.isChecked()) {
+            isQ8Correct = false;
             Toast.makeText(this, getString(R.string.toast_wrong), Toast.LENGTH_SHORT).show();
         }
     }
@@ -194,9 +214,10 @@ public class MainActivity extends AppCompatActivity {
      */
     public void radio6(View view) {
         if(view.getId() == R.id.answer_q9) {
-            score += 1;
+            isQ9Correct = true;
             Toast.makeText(this, getString(R.string.toast_correct), Toast.LENGTH_SHORT).show();
         } else {
+            isQ9Correct = false;
             Toast.makeText(this, getString(R.string.toast_wrong), Toast.LENGTH_SHORT).show();
         }
     }
@@ -207,12 +228,13 @@ public class MainActivity extends AppCompatActivity {
      */
     public void checkBoxThree(View view){
 
-        if (!Q10firstCheckBox.isChecked() && Q10secondCheckBox.isChecked() && Q10thirdCheckBox.isChecked() && Q10fourthCheckBox.isChecked() && Q10fifthCheckBox.isChecked() && Q10sixthCheckBox.isChecked()) {
-            score += 1;
+        if (!Q10firstCheckBox.isChecked() && Q10secondCheckBox.isChecked() && Q10thirdCheckBox.isChecked() && Q10fourthCheckBox.isChecked() && !Q10fifthCheckBox.isChecked() && Q10sixthCheckBox.isChecked()) {
+            isQ10Correct = true;
             Toast.makeText(this, getString(R.string.toast_correct), Toast.LENGTH_SHORT).show();
         }
 
         if (Q10firstCheckBox.isChecked() || Q10fifthCheckBox.isChecked()) {
+            isQ10Correct = false;
             Toast.makeText(this, getString(R.string.toast_wrong), Toast.LENGTH_SHORT).show();
         }
     }
@@ -225,9 +247,23 @@ public class MainActivity extends AppCompatActivity {
 
     public void setScore(View view) {
         Q4Result();
+        // remember to reset score for each time the grading logic calculates it.
+        score = 0;
+
+        if (isQ1Correct) score++;
+        if (isQ2Correct) score++;
+        if (isQ3Correct) score++;
+        if (isQ4Correct) score++;
+        if (isQ5Correct) score++;
+        if (isQ6Correct) score++;
+        if (isQ7Correct) score++;
+        if (isQ8Correct) score++;
+        if (isQ9Correct) score++;
+        if (isQ10Correct) score++;
+
         String scoreSummary = createScoreSummary(nameField.getText().toString(), score);
-        Toast.makeText(this, scoreSummary,Toast.LENGTH_SHORT).show();
-    }
+        Toast.makeText(this, scoreSummary, Toast.LENGTH_SHORT).show();
+        }
 
 
     private String createScoreSummary(String name, int score) {
