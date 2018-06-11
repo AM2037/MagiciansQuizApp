@@ -119,10 +119,12 @@ public class MainActivity extends AppCompatActivity {
         EditText et = findViewById(R.id.response_field);
         String answer = et.getText().toString();
 
-        if (answer.isEmpty()) {
-           Toast.makeText(this, getString(R.string.toast_wrong), Toast.LENGTH_SHORT).show();
-        } else {
+
+        if (answer.equals("Janet")) {
             score += 1;
+
+        } else {
+            Toast.makeText(this, getString(R.string.toast_wrong), Toast.LENGTH_SHORT).show();
         }
     }
 
@@ -133,7 +135,7 @@ public class MainActivity extends AppCompatActivity {
      */
     public void checkBoxOne(View view){
 
-        if (Q5firstCheckBox.isChecked() && Q5secondCheckBox.isChecked() && Q5fourthCheckBox.isChecked() && Q5fifthCheckBox.isChecked() && Q5sixthCheckBox.isChecked()) {
+        if (Q5firstCheckBox.isChecked() && Q5secondCheckBox.isChecked() && !Q5thirdCheckBox.isChecked() && Q5fourthCheckBox.isChecked() && Q5fifthCheckBox.isChecked() && Q5sixthCheckBox.isChecked()) {
             score += 1;
             Toast.makeText(this, getString(R.string.toast_correct), Toast.LENGTH_SHORT).show();
         }
@@ -176,7 +178,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void checkBoxTwo(View view){
 
-        if (Q8firstCheckBox.isChecked() && Q8fourthCheckBox.isChecked() && Q8sixthCheckBox.isChecked()) {
+        if (Q8firstCheckBox.isChecked() && !Q8secondCheckBox.isChecked() && !Q8thirdCheckBox.isChecked() && Q8fourthCheckBox.isChecked() && !Q8fifthCheckBox.isChecked() && Q8sixthCheckBox.isChecked()) {
             score += 1;
             Toast.makeText(this, getString(R.string.toast_correct), Toast.LENGTH_SHORT).show();
         }
@@ -205,7 +207,7 @@ public class MainActivity extends AppCompatActivity {
      */
     public void checkBoxThree(View view){
 
-        if (Q10secondCheckBox.isChecked() && Q10thirdCheckBox.isChecked() && Q10fourthCheckBox.isChecked() && Q10sixthCheckBox.isChecked()) {
+        if (!Q10firstCheckBox.isChecked() && Q10secondCheckBox.isChecked() && Q10thirdCheckBox.isChecked() && Q10fourthCheckBox.isChecked() && Q10fifthCheckBox.isChecked() && Q10sixthCheckBox.isChecked()) {
             score += 1;
             Toast.makeText(this, getString(R.string.toast_correct), Toast.LENGTH_SHORT).show();
         }
