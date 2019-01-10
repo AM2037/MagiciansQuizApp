@@ -16,17 +16,17 @@ appears at the bottom of the screen alerting the user if it was the correct choi
 At the end of the quiz there is the option to see the score which displays the user's name and number of points awarded!
 
 ## Screenshots of the User Interface
-
+[![U1.png](https://i.postimg.cc/qRSvsc2N/U1.png)](https://postimg.cc/gXypdZSp) [![UI1.png](https://i.postimg.cc/NFWP4SP3/UI1.png)](https://postimg.cc/4HQ54LGP) [![UI2.png](https://i.postimg.cc/QM04PHyk/UI2.png)](https://postimg.cc/PLvQvrhP) [![UI3.png](https://i.postimg.cc/Vsrwq8JH/UI3.png)](https://postimg.cc/jCbBTBQz) [![UI4.png](https://i.postimg.cc/mrpx9XBs/UI4.png)](https://postimg.cc/CZ86T4RP) [![UI5.png](https://i.postimg.cc/dt2z6twn/UI5.png)](https://postimg.cc/KRYqvbKg) [![UI6.png](https://i.postimg.cc/YC2yx6Xq/UI6.png)](https://postimg.cc/4mM5f9kr) [![UI7.png](https://i.postimg.cc/HLczSBbH/UI7.png)](https://postimg.cc/B832b5hw) [![UI8.png](https://i.postimg.cc/SNSr0ycg/UI8.png)](https://postimg.cc/YjPgYBnF) [![U10.png](https://i.postimg.cc/xjB2tThb/U10.png)](https://postimg.cc/mh3JrRbb) [![UI9.png](https://i.postimg.cc/jj766CrS/UI9.png)](https://postimg.cc/069JPkQT) [![UI10.png](https://i.postimg.cc/153pCvZT/UI10.png)](https://postimg.cc/c6Pg6MCM)
 
 ## About the Code
 
-#The Questions
+### The Questions
 As mentioned above, the questions come in multiple formats which are radio buttons, or questions with only one correct answer; 
 checkboxes, or questions that have more than one correct answer; and edit texts which are open ended responses. For each one, 
 also touched on earlier, there are toast messages in place alerting the user if they have chosen correctly or not, as well as checks on
 the open ended responses ensuring the correct format or data is entered! 
 
-#Resources and Accessibility
+### Resources and Accessibility
 Each question and image have been extracted into separate resource files so that if any changes need to be made later they only need 
 change in oneplace in the code base instead of having to change each individual instance of each. This helps to streamline testing, 
 debugging, and updating the code in the future! The string resource files are located in the values/strings.xml file. For better 
@@ -34,7 +34,7 @@ accessibility and language support, I've included the Spanish translation for th
 directory. The images have been uploaded in multiple resolutions for best quality based on various screen sizes as drawable resources 
 using Android Studio's "Batch Drawable Import" extension. 
 
-#Quiz Logic
+### Quiz Logic
 To start, I declared all of the variables for the checkboxes and EditText fields (or open ended response fields) to global private 
 variables so that the scope is wide enough without compromising the security of the app. Then I've set all of the global checkboxes 
 to null for questions 5, 8, and 10. Also set to null is the open-ended global variable responseField which corresponds with the EditText 
@@ -54,7 +54,7 @@ incorrectly chosen and need to retry. For the EditText, or open-ended questions,
 well as logic to convert the text into a string. Following this is an if/else block which checks if they've entered the correct answer, 
 with accompanying toast messages for true or false. 
        
-#Scoring Logic 
+### Scoring Logic 
 For the scoring system, the logic has been programmed in the MainActivity.Java file. Within the main class declaration incorporating 
 backwards compatibility, I first initialized the value of my score integer to 0, which is a global variable. Following that are more 
 global declarations of variables to check if each question is correct or not, with each set to false. At the end of the MainActivity.java file 
